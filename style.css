@@ -19,15 +19,15 @@ button {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: max(1400px, 100vw);
-  height: 75vh;
+  height: 100vh;
   position: relative;
 }
 
 .main .box {
   background-color: black;
-  height: 75vh;
+  height: 100vh;
   width: 100%;
-  opacity: 0.5;
+  opacity: 0.6;
   position: absolute;
   top: 0;
 }
@@ -39,6 +39,10 @@ button {
   align-items: center;
   justify-content: space-between;
   height: 90px;
+}
+
+.navLogo {
+  width: 150px;
 }
 
 .navSelect,
@@ -54,14 +58,10 @@ button {
   font-weight: bold;
 }
 
-/* .navSelect {
-  background-color: rgba(0, 0, 0, 0.247);
-  border: 1px solid rgb(167, 165, 165);
-} */
-
 .navBtn {
   background-color: red;
   border: none;
+  padding: 0.8em 1.3em;
 }
 
 nav img,
@@ -93,8 +93,8 @@ select {
   font-size: 0.85em;
 }
 
-.register input::placeholder {
-  color: rgb(177, 175, 175);
+.emailRegister::placeholder {
+  color: rgb(184, 179, 179);
 }
 
 .form > :nth-child(2) {
@@ -119,13 +119,13 @@ select {
 }
 
 .fSectionText h1 {
-  font-size: 3.5em;
+  font-size: 2.8em;
   font-weight: bolder;
   padding-bottom: 0.5em;
 }
 
 .fSectionText p {
-  font-size: 1.8em;
+  font-size: 1.3em;
 }
 
 .fSectionTv {
@@ -141,8 +141,8 @@ select {
 .fSectionTv video {
   width: 28vw;
   position: absolute;
-  top: 120px;
-  right: 115px;
+  top: 90px;
+  right: 85px;
 }
 
 .faq {
@@ -155,7 +155,7 @@ select {
 }
 
 .faq > :nth-child(1) {
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-weight: 600;
   text-align: center;
 }
@@ -200,7 +200,7 @@ select {
 }
 
 .footer {
-  padding: 4em 10em;
+  padding: 3.4em 11em;
   display: grid;
   grid-template-columns: auto auto auto auto;
 }
@@ -214,4 +214,131 @@ select {
 
 .footerItems a {
   color: rgb(156, 152, 152);
+}
+
+/* For mobile screens */
+/* @media screen and (max-width: 576px) { */
+@media screen and (min-width: 200px) {
+  .main .box {
+    opacity: 0.65;
+  }
+  .navBar {
+    max-width: 90vw;
+    height: 85px;
+  }
+  .navLogo {
+    margin-top: 0.5em;
+    width: 90px;
+  }
+  .navSelect {
+    display: none;
+  }
+  .navBtn {
+    padding: 0.35em 1em;
+  }
+  .register {
+    gap: 0.5rem;
+    padding: 0 2.8em;
+  }
+  .register h1 {
+    font-size: 1.7em;
+  }
+  .register p {
+    font-size: 0.8em;
+  }
+  .form input {
+    padding: 1em 0.5em;
+    font-size: 0.6em;
+  }
+  .form > :nth-child(2) {
+    padding: 0.8em 1.5em;
+    font-size: 0.6em;
+  }
+  .fSectionCover {
+    flex-direction: column;
+    text-align: center;
+    margin: 0 22px;
+  }
+  .fSectionText h1 {
+    font-size: 2em;
+  }
+  .fSectionText p {
+    font-size: 1.1em;
+  }
+  .fSectionTv img {
+    width: 85vw;
+  }
+  .fSectionTv video {
+    width: 60vw;
+    top: 42px;
+    right: 38px;
+  }
+  .faq {
+    padding: 1em;
+  }
+  .faq > :nth-child(1) {
+    font-size: 2rem;
+  }
+  .question {
+    width: 90vw;
+    padding: 1.2rem 1.3rem;
+    font-size: 1rem;
+  }
+  .faq2 span {
+    font-size: 1.1rem;
+  }
+  .footer {
+    padding: 1.6em 3em;
+    grid-template-columns: auto auto;
+  }
+  .footerItems {
+    gap: 0.75em;
+  }
+}
+
+/* For tablet screens */
+@media screen and (min-width: 768px) {
+  .main {
+    height: 90vh;
+  }
+  .main .box {
+    height: 90vh;
+  }
+  .navBar {
+    height: 90px;
+  }
+  .register {
+    gap: 1rem;
+    font-size: 1em;
+  }
+  .navSelect {
+    display: inline;
+  }
+  .navBtn {
+    padding: 0.35em 1em;
+  }
+  .fSectionTv video {
+    top: 105px;
+    right: 98px;
+  }
+}
+
+/* For large screens 1440px+ */
+@media screen and (min-width: 1440px) {
+  .main {
+    height: 75vh;
+  }
+  .main .box {
+    height: 75vh;
+  }
+  .fSectionText h1 {
+    font-size: 3.5em;
+  }
+  .fSectionText p {
+    font-size: 1.51em;
+  }
+  .fSectionTv video {
+    top: 120px;
+    right: 111px;
+  }
 }
