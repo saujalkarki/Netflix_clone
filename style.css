@@ -216,9 +216,8 @@ select {
   color: rgb(156, 152, 152);
 }
 
-/* For mobile screens */
-/* @media screen and (max-width: 576px) { */
-@media screen and (min-width: 200px) {
+/* -----------------------------For mobile screens -----------------------------*/
+@media screen and (max-width: 576px) {
   .main .box {
     opacity: 0.65;
   }
@@ -294,15 +293,22 @@ select {
   .footerItems {
     gap: 0.75em;
   }
+  .footerItems1 {
+    grid-row: 2;
+  }
 }
 
 /* For tablet screens */
-@media screen and (min-width: 768px) {
+@media screen and ((min-width: 576px) and (max-width:768px)) {
   .main {
     height: 90vh;
   }
   .main .box {
     height: 90vh;
+  }
+  .navLogo {
+    margin-top: 0.5em;
+    width: 90px;
   }
   .navBar {
     height: 90px;
@@ -311,6 +317,20 @@ select {
     gap: 1rem;
     font-size: 1em;
   }
+  .register h1 {
+    font-size: 1.7em;
+  }
+  .register p {
+    font-size: 0.8em;
+  }
+  .form input {
+    padding: 1em 0.5em;
+    font-size: 0.6em;
+  }
+  .form > :nth-child(2) {
+    padding: 0.8em 1.5em;
+    font-size: 0.6em;
+  }
   .navSelect {
     display: inline;
   }
@@ -318,18 +338,141 @@ select {
     padding: 0.35em 1em;
   }
   .fSectionTv video {
+    width: 70%;
     top: 105px;
     right: 98px;
   }
+  .fSectionCover {
+    flex-direction: column;
+    text-align: center;
+    margin: 0 22px;
+  }
+  .fSectionText h1 {
+    font-size: 2em;
+  }
+  .fSectionText p {
+    font-size: 1.1em;
+  }
+  .fSectionTv img {
+    width: 85vw;
+  }
+  .faq {
+    padding: 1em;
+  }
+  .faq > :nth-child(1) {
+    font-size: 2rem;
+  }
+  .question {
+    width: 90vw;
+    padding: 1.2rem 1.3rem;
+    font-size: 1rem;
+  }
+  .faq2 span {
+    font-size: 1.1rem;
+  }
+  .footer {
+    padding: 1.6em 3em;
+    grid-template-columns: auto auto;
+  }
+  .footerItems {
+    gap: 0.75em;
+  }
+  .footerItems1 {
+    grid-row: 2;
+  }
 }
 
-/* For large screens 1440px+ */
-@media screen and (min-width: 1440px) {
+/* for large tablets and small desktops */
+@media screen and ((min-width: 768px)and (max-width:992px)) {
   .main {
-    height: 75vh;
+    height: 90vh;
   }
   .main .box {
-    height: 75vh;
+    height: 90vh;
+  }
+  .navBar {
+    max-width: 95vw;
+    height: 85px;
+  }
+  .navLogo {
+    width: 90px;
+  }
+  .navSelect {
+    display: none;
+  }
+  button {
+    padding: 0.7em 1.3em;
+    font-size: 0.8em;
+  }
+  .navBtn {
+    padding: 0.6em 1.1em;
+  }
+  .register {
+    gap: 1rem;
+  }
+  .register h1 {
+    font-size: 1.7em;
+  }
+  .register p {
+    font-size: 0.9em;
+  }
+  .fSectionCover {
+    flex-direction: column;
+    text-align: center;
+    margin: 0 22px;
+  }
+  .fSectionText h1 {
+    font-size: 2em;
+  }
+  .fSectionText p {
+    font-size: 1.1em;
+  }
+  .fSectionTv img {
+    width: 75vw;
+  }
+  .fSectionTv video {
+    width: 60vw;
+    top: 75px;
+    right: 75px;
+  }
+  .faq {
+    padding: 3em 1em;
+    gap: 1rem;
+  }
+  .faq > :nth-child(1) {
+    font-size: 2rem;
+  }
+  .question {
+    width: 92vw;
+    padding: 1.2rem 1.3rem;
+    font-size: 1.1rem;
+  }
+  .faq2 span {
+    font-size: 1.1rem;
+  }
+  .footer {
+    padding: 1.6em 3em;
+    grid-template-columns: auto auto;
+  }
+  .footerItems {
+    gap: 0.75em;
+  }
+  .footerItems1 {
+    grid-row: 2;
+  }
+}
+
+@media screen and ((min-width: 992px)and (max-width:1200px)) {
+  /* let it be default css */
+}
+
+/* For large screens 1200px+ */
+@media screen and (min-width: 1200px) {
+  .main {
+    height: 100vh;
+  }
+  .main .box {
+    height: 100vh;
   }
   .fSectionText h1 {
     font-size: 3.5em;
@@ -338,7 +481,7 @@ select {
     font-size: 1.51em;
   }
   .fSectionTv video {
-    top: 120px;
-    right: 111px;
+    top: 90px;
+    right: 80px;
   }
 }
